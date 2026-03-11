@@ -1,6 +1,8 @@
-﻿namespace Practice1
+﻿using System.Runtime.InteropServices;
+
+namespace Practice1
 {
-    public class Pet
+    public abstract class Pet
     {
         private string _name;
         private int _age;
@@ -44,6 +46,11 @@
         {
             return $"{Name} is {Age} years old & is a {Type}!";
         }
+
+        //Creating a virtual method to use.
+        public abstract string Speak();
+            //override this on ALL :)
+    
 
     }
 }

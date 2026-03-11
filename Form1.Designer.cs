@@ -147,6 +147,7 @@
             lstPet.Name = "lstPet";
             lstPet.Size = new Size(357, 329);
             lstPet.TabIndex = 7;
+            lstPet.SelectedIndexChanged += lstPet_SelectedIndexChanged;
             // 
             // Form1
             // 

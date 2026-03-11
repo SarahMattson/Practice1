@@ -12,36 +12,43 @@ namespace Practice1
         private void Form1_Load(object sender, EventArgs e)
         {
             ResetForm();
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string radType = "?";
+            Pet petty;
+
             if (radCat.Checked)
             {
-                radType = "Cat";
+                petty = new cat();
             }
             else if (radDog.Checked)
             {
-                radType = "Dog";
+                petty = new Dog();
             }
             else if (radBird.Checked)
             {
-                radType = "Bird";
-            }
-
-            Pet pet;
-
-            if (txtName.Text == "")
-            {
-                pet = new Pet("Spot", (int)nudAge.Value + 1, "Dog");
+                petty = new Bird();
             }
             else
             {
-                pet = new Pet(txtName.Text, (int)nudAge.Value, radType);
+                petty = new cat();
             }
 
-            pets.Add(pet);
+            if (txtName.Text != "")
+            {
+                petty.Name = txtName.Text;
+                petty.Age = (int)nudAge.Value;
+                petty.Type = petty.GetType().ToString(); // this is changing the class NAME to a STRING
+
+            }
+            else
+            {
+                return; // loser you did it wrong learn how to use computers you stupid fuck
+            }
+
+            pets.Add(petty);
             UpdatePetList();
 
         }
@@ -68,6 +75,14 @@ namespace Practice1
             {
                 lstPet.Items.Add(pet.DisplayPet());
             }
+        }
+
+        private void lstPet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int chosenIndex = lstPet.SelectedIndex;
+            Pet chosenPet = pets[chosenIndex];
+            Form2 formName = new Form2(chosenPet);
+            formName.ShowDialog();
         }
     }
 }
