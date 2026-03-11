@@ -40,75 +40,85 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(138, 198);
+            btnSave.Location = new Point(97, 119);
+            btnSave.Margin = new Padding(2);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(211, 92);
+            btnSave.Size = new Size(148, 55);
             btnSave.TabIndex = 0;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(471, 198);
+            btnQuit.Location = new Point(330, 119);
+            btnQuit.Margin = new Padding(2);
             btnQuit.Name = "btnQuit";
-            btnQuit.Size = new Size(211, 92);
+            btnQuit.Size = new Size(148, 55);
             btnQuit.TabIndex = 1;
             btnQuit.Text = "Quit";
             btnQuit.UseVisualStyleBackColor = true;
+            btnQuit.Click += btnQuit_Click;
             // 
             // lblTtitle
             // 
             lblTtitle.AutoSize = true;
-            lblTtitle.Location = new Point(381, 35);
+            lblTtitle.Location = new Point(267, 21);
+            lblTtitle.Margin = new Padding(2, 0, 2, 0);
             lblTtitle.Name = "lblTtitle";
-            lblTtitle.Size = new Size(59, 25);
+            lblTtitle.Size = new Size(38, 15);
             lblTtitle.TabIndex = 2;
             lblTtitle.Text = "label1";
             // 
             // lblSpeak
             // 
             lblSpeak.AutoSize = true;
-            lblSpeak.Location = new Point(381, 325);
+            lblSpeak.Location = new Point(267, 195);
+            lblSpeak.Margin = new Padding(2, 0, 2, 0);
             lblSpeak.Name = "lblSpeak";
-            lblSpeak.Size = new Size(59, 25);
+            lblSpeak.Size = new Size(38, 15);
             lblSpeak.TabIndex = 3;
             lblSpeak.Text = "label1";
             // 
             // txtName
             // 
-            txtName.Location = new Point(138, 113);
+            txtName.Location = new Point(97, 68);
+            txtName.Margin = new Padding(2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(150, 31);
+            txtName.Size = new Size(106, 23);
             txtName.TabIndex = 4;
             // 
             // txtAge
             // 
-            txtAge.Location = new Point(334, 113);
+            txtAge.Location = new Point(234, 68);
+            txtAge.Margin = new Padding(2);
             txtAge.Name = "txtAge";
-            txtAge.Size = new Size(150, 31);
+            txtAge.Size = new Size(106, 23);
             txtAge.TabIndex = 5;
             // 
             // txtType
             // 
-            txtType.Location = new Point(532, 113);
+            txtType.Location = new Point(372, 68);
+            txtType.Margin = new Padding(2);
             txtType.Name = "txtType";
-            txtType.Size = new Size(150, 31);
+            txtType.Size = new Size(106, 23);
             txtType.TabIndex = 6;
             // 
             // lblLoyalty
             // 
             lblLoyalty.AutoSize = true;
-            lblLoyalty.Location = new Point(381, 396);
+            lblLoyalty.Location = new Point(267, 238);
+            lblLoyalty.Margin = new Padding(2, 0, 2, 0);
             lblLoyalty.Name = "lblLoyalty";
-            lblLoyalty.Size = new Size(59, 25);
+            lblLoyalty.Size = new Size(38, 15);
             lblLoyalty.TabIndex = 7;
             lblLoyalty.Text = "label1";
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(lblLoyalty);
             Controls.Add(txtType);
             Controls.Add(txtAge);
@@ -117,6 +127,7 @@
             Controls.Add(lblTtitle);
             Controls.Add(btnQuit);
             Controls.Add(btnSave);
+            Margin = new Padding(2);
             Name = "Form2";
             Text = "Form2";
             Load += Form2_Load;

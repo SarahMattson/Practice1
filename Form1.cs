@@ -40,7 +40,7 @@ namespace Practice1
             {
                 petty.Name = txtName.Text;
                 petty.Age = (int)nudAge.Value;
-                petty.Type = petty.GetType().ToString(); // this is changing the class NAME to a STRING
+                petty.Type = petty.GetType().ToString().Split(".")[1]; // this is changing the class NAME to a STRING
 
             }
             else
@@ -83,6 +83,14 @@ namespace Practice1
             Pet chosenPet = pets[chosenIndex];
             Form2 formName = new Form2(chosenPet);
             formName.ShowDialog();
+            UpdatePetList();
+        }
+
+        private void btnAddRandomAnimal_Click(object sender, EventArgs e)
+        {
+            Pet randomPet = PetFactory.GetRandomAnimal();
+            pets.Add(randomPet);
+            UpdatePetList();
         }
     }
 }

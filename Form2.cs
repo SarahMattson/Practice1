@@ -19,10 +19,28 @@ public partial class Form2 : Form
 
         lblTtitle.Text = CurrentPet.Type;
         lblSpeak.Text = CurrentPet.Speak();
-        
-        if(CurrentPet is Dog dog)
+
+        if (CurrentPet is Dog dog)
         {
             lblLoyalty.Text = dog.Loyalty.ToString();
         }
+    }
+
+    private void UpdateAnimal()
+    {
+        CurrentPet.Name = txtName.Text;
+        CurrentPet.Age = Convert.ToInt32(txtAge.Text);
+        CurrentPet.Type = txtType.Text;
+    }
+    private void btnSave_Click(object sender, EventArgs e)
+    {
+        UpdateAnimal();
+        this.Close();
+    }
+
+    private void btnQuit_Click(object sender, EventArgs e)
+    {
+        this.Close();
+
     }
 }
